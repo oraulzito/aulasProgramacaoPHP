@@ -44,11 +44,11 @@ if ($erroDob == false && $erroEmail == false) {
 }
 
 if ($erroDob && $erroEmail) {
-    header('location: form.php?erroDob=' . $erroDob . '&erroEmail=' . $erroEmail);
+    header('location: upload.php?erroDob=' . $erroDob . '&erroEmail=' . $erroEmail);
 } else if ($erroDob) {
-    header('location: form.php?erroDob=' . $erroDob);
+    header('location: upload.php?erroDob=' . $erroDob);
 } else if ($erroEmail) {
-    header('location: form.php?erroEmail=' . $erroEmail);
+    header('location: upload.php?erroEmail=' . $erroEmail);
 }
 
 ?>
