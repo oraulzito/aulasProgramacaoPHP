@@ -1,3 +1,16 @@
+<?php
+$erroDob = false;
+$erroEmail = false;
+
+
+if (isset($_REQUEST['erroDob'])) {
+    $erroDob = $_REQUEST['erroDob'];
+}
+
+if (isset($_REQUEST['erroEmail'])) {
+    $erroEmail = $_REQUEST['erroEmail'];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,11 +31,15 @@
 
     <label> E-mail
         <input class="form-control" name="email" type="text">
+        <?php
+        if($erroEmail){
+            echo '<p class="alert alert-danger">Seu email não é válido</p>';
+        }
+        ?>
     </label>
 
 
     <div> Sexo
-
         <input class="form-check-label" id="masculino" name="sexo" type="radio" value="M">
         <label for="masculino">Masculino</label>
         <input class="form-check-label" id="feminino" name="sexo" type="radio" value="F">
@@ -34,6 +51,11 @@
 
     <label> Data de nascimento
         <input class="form-control" name="dataNascimento" type="date">
+        <?php
+        if($erroDob){
+            echo '<p class="alert alert-danger">Erro na data de nascimento, tem que ser maior que 01-01-1900 e menor que a data atual!</p>';
+        }
+        ?>
     </label>
 
 
