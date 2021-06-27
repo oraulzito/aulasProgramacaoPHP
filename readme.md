@@ -8,8 +8,9 @@
 - [X] Forms
 - [X] File Upload
 - [X] Cookies and Session
-- [ ] Files
-- [ ] DB and PHP
+- [X] Files
+- [X] MySQL and PHP
+- [X] PDO and PHP
 - [ ] OO in PHP
 - [ ] JS Intro
 - [ ] DOM
