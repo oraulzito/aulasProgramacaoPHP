@@ -1,6 +1,6 @@
 <?php
 $erro = false;
-$caminho = './files/';
+$caminho = './';
 //2) Crie uma página PHP para processar o formulário do exercício anterior.
 // Caso o arquivo enviado tenha mais de 30KB ou não seja uma imagem, redirecione o usuário de volta para a página do formulário.
 // Caso esteja tudo ok (imagem abaixo de 30KB), mostre o nome e a foto enviados.
@@ -11,7 +11,7 @@ if ($_FILES['imagem']['size'] < 30000
         || $_FILES['imagem']['type'] == 'image/jpeg'
         || $_FILES['imagem']['type'] == 'image/jpg'
         || $_FILES['imagem']['type'] == 'image/png') {
-        $img = '<img src="./files/' . $_FILES['imagem']['name'] . '">';
+        $img = '<img src="./' . $_FILES['imagem']['name'] . '">';
     }
 } else {
     $erro = true;
