@@ -11,7 +11,8 @@
 - [X] Files
 - [X] MySQL and PHP
 - [X] PDO and PHP
-- [ ] OO in PHP
+- [X] OO in PHP - PT 1
+- [X] OO in PHP - PT 2
 - [ ] JS Intro
 - [ ] DOM
 - [ ] Events
