@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Desorientação a Objetos</title>
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+</head>
+<style>
+    body {
+        font-family: Arial;
+    }
+
+    label {
+        display: inline-block;
+        width: 150px;
+        margin: 2px;
+    }
+
+    fieldset {
+        display: inline-block;
+    }
+
+    th {
+        background-color: black;
+        color: white;
+    }
+
+    #datanasc, #dataadmissao {
+        width: 10em;
+    }
+
+    td:last-child {
+        text-align: center;
+        color: red;
+        cursor: pointer;
+    }
+</style>
+<body>
+<form>
+    <fieldset>
+        <legend>Cadastro de Funcionário</legend>
+        <label for="nome">Nome:</label> <input id="nome" type="text"><br>
+        <label for="datanasc">Data de Nascimento:</label> <input id="datanasc" placeholder="dd/mm/aaaa" type="text"><br>
+        <label for="dataadmissao">Data de Admissão:</label> <input id="dataadmissao" placeholder="dd/mm/aaaa"
+                                                                   type="text"><br>
+        <input id="btcadastrar" type="button" value="Cadastrar">
+    </fieldset>
+</form>
+<table id="funcionarios">
+    <thead>
+    <tr>
+        <th>Nome</th>
+        <th>Data de Nascimento</th>
+        <th>Data de Admissão</th>
+        <th>Excluir</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+<script>
+    function Pessoas() {
+        this.nome = "";
+        this.dataNascimento = "";
+
+        this.idade = function () {
+            let dataNasc = new Date(this.dataNascimento);
+            let dataAtual = new Date();
+            return dataAtual.getFullYear() - dataNasc.getFullYear();
+        };
+    }
+
+    Pessoas.prototype = new Pessoas();
+
+    function Funcionario() {
+        this.dataAdminissao = "";
+
+        this.tempoServico = function () {
+            let dataAdm = new Date(this.dataAdminissao);
+            let dataAtual = new Date();
+            return dataAtual.getFullYear() - dataAdm.getFullYear();
+        };
+    }
+
+    Object.setPrototypeOf(Funcionario.prototype, Pessoas.prototype);
+
+    $("#btcadastrar").on('click', () => {
+        let funcionario = new Funcionario();
+
+        funcionario.nome = $('#nome').val();
+        funcionario.dataNascimento = $('#datanasc').val();
+        funcionario.dataAdminissao = $('#dataadmissao').val();
+
+        let erro = "";
+        if (!funcionario.dataNascimento.match("(\\d{2})+/(\\d{2})+/(\\d{4})")) {
+            erro += "A data de nascimento não está no formato dd/mm/yyyy! \n";
+        }
+
+        if (!funcionario.dataAdminissao.match("(\\d{2})+/(\\d{2})+/(\\d{4})")) {
+            erro += "A data de admissão não está no formato dd/mm/yyyy! \n";
+        }
+
+
+        if (erro !== "") {
+            alert(erro);
+        } else {
+            $("#funcionarios tbody").append('<tr>' +
+                '<td>' + funcionario.nome + '</td>' +
+                '<td>' + funcionario.dataNascimento + '(' + funcionario.idade() + ' anos)</td>' +
+                '<td>' + funcionario.dataAdminissao + '(' + funcionario.tempoServico() + ' anos)</td>' +
+                '<td style="color: #f00" onclick="deletar(this)">X</td>' +
+                '</tr>');
+
+            $('#nome').val('');
+            $('#datanasc').val('');
+            $('#dataadmissao').val('');
+        }
+    });
+
+    function deletar(e) {
+        $(e).closest("tr").remove();
+    }
+</script>
+</body>
+</html>

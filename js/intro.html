@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Introdução ao JS</title>
+    <script>
+        let final = [];
+        let continuar = true;
+
+        do {
+            let varPrompt = {};
+            varPrompt['nome'] = prompt('Informe seu nome: ');
+            varPrompt['idade'] = prompt('Informe sua idade: ');
+            final.push(varPrompt);
+            continuar = confirm("Deseja continuar?");
+        } while (continuar);
+
+        alert(JSON.stringify(final));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

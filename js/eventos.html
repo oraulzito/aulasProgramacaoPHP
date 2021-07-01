@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Na pandemia não!</title>
+    <!-- CSS only -->
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" rel="stylesheet">
+</head>
+<body>
+<form class="w-75 m-auto" id="form">
+    <label for="name">Nome: </label>
+    <input class="form-control" id="name" type="text">
+    <label for="email">Email: </label>
+    <input class="form-control" id="email" type="text">
+    <small>Formato: eu@eu.com</small>
+    <br>
+    <label for="senha">Senha: </label>
+    <input class="form-control" id="senha" type="password">
+    <label for="dataNasc">Data Nascimento: </label>
+    <input class="form-control" id="dataNasc" type="text">
+    <label for="Endereco">Endereço: </label>
+    <input class="form-control" id="endereco" type="text">
+    <label for="Telefone">Telefone: </label>
+    <input class="form-control" id="telefone" maxlength="15" type="text">
+    <small>Formato: (xx)xxxxx-xxxx</small>
+    <br>
+    <button class="btn btn-primary" id="btn">Salvar</button>
+</form>
+
+<script type="application/javascript">
+    document.getElementById('btn').addEventListener('click', function (e) {
+        let email = document.getElementById('email').value;
+        let dataNasc = document.getElementById('dataNasc').value;
+        let telefone = document.getElementById('telefone').value;
+
+        let erro = "Houve um erro com o(s) campo(s):\n";
+
+        if (!email.includes('@')) {
+            erro += "O email não contém @! \n";
+            if (!email.includes('.com', email.indexOf('@'))) {
+                erro += "O email não contém .com! \n";
+            }
+        }
+
+        let data = dataNasc.split('/');
+        if (!(parseInt(data[0]) > 1 || parseInt(data[0]) < 31) && !(parseInt(data[1]) > 1 || parseInt(data[1]) < 12) && !(parseInt(data[2]) > 1900 || parseInt(data[2]) < 2021)) {
+            erro += "a data não está no formato dd/mm/yyyy! \n";
+        }
+
+        if (!telefone.includes('(') && !telefone.includes('(') && !telefone.includes('-')) {
+            erro += "O telefone não está no formarto (xx)xxxx-xxxx \n";
+        }
+
+
+        if (erro !== "Houve um erro com o(s) campo(s):\n") {
+            alert(erro);
+            e.preventDefault();
+        }
+    });
+</script>
+</body>
+</html>

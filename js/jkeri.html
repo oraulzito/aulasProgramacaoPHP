@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>As caixinha</title>
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <style>
+        div div {
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 4px;
+            background-color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        #move {
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+<div id="caixas">
+    <div id="hide" onclick="$(this).hide()">Eu sumo quando clicado</div>
+    <div id="fade" onclick="$(this).fadeOut()">Eu desvaneço quando clicado</div>
+    <div id="slide" onclick="$(this).slideUp()">Eu encolho quando clicado</div>
+    <div id="luz" onclick="interruptor()">Interruptor</div>
+    <div id="move" onclick="mover($(this))">Eu me movo quando clicado</div>
+    <div id="sensor" onmouseenter="$(this).text('Entrou')" onmouseout="$(this).text('Sensor de Mouse')">Sensor de Mouse
+    </div>
+    <div id="fabrica" onclick="$(this).after('<div class=\'added\'></div>')">Eu fabrico caixas</div>
+    <div id="destroi" onclick="$(this).prev('div.added').remove()">Eu destruo caixas</div>
+</div>
+<script>
+    function interruptor() {
+        if ($('body').css('background-color') !== 'rgb(0, 0, 0)') {
+            $('body').css('background-color', 'rgba(0, 0, 0, 1)');
+        } else {
+            $('body').css('background-color', 'rgba(255,255,255,1)');
+        }
+    }
+
+    function mover(e) {
+        if (e.css('left') !== '0px') {
+            e.animate({left: '0px'}, 2000);
+            e.nextAll().animate({left: '0px'}, 2000);
+        } else {
+            e.animate({left: '110px'}, 2000);
+            e.nextAll().animate({left: '110px'}, 2000);
+        }
+    }
+</script>
+</body>
+</html>

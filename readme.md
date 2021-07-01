@@ -13,14 +13,14 @@
 - [X] PDO and PHP
 - [X] OO in PHP - PT 1
 - [X] OO in PHP - PT 2
-- [ ] JS Intro
-- [ ] DOM
-- [ ] Events
-- [ ] REGEX
-- [ ] jQuery
-- [ ] JS and Files
-- [ ] OO in JS (prototypes)
-- [ ] OO in JS (classes)
-- [ ] Canvas
-- [ ] Ajax
+- [X] JS Intro
+- [X] DOM
+- [X] Events
+- [X] REGEX
+- [X] jQuery
+- [X] JS and Files
+- [X] OO in JS (prototypes)
+- [X] OO in JS (classes)
+- [X] Canvas
+- [X] Ajax
 - [ ] Final Work

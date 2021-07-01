@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Desorientação a Objetos</title>
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+</head>
+<style>
+    body {
+        font-family: Arial;
+    }
+
+    label {
+        display: inline-block;
+        width: 150px;
+        margin: 2px;
+    }
+
+    fieldset {
+        display: inline-block;
+    }
+
+    th {
+        background-color: black;
+        color: white;
+    }
+
+    #datanasc, #dataadmissao {
+        width: 10em;
+    }
+
+    td:last-child {
+        text-align: center;
+        color: red;
+        cursor: pointer;
+    }
+</style>
+<body>
+<form>
+    <fieldset>
+        <legend>Cadastro de Funcionário</legend>
+        <label for="nome">Nome:</label> <input id="nome" type="text"><br>
+        <label for="datanasc">Data de Nascimento:</label> <input id="datanasc" placeholder="dd/mm/aaaa" type="text"><br>
+        <label for="dataadmissao">Data de Admissão:</label> <input id="dataadmissao" placeholder="dd/mm/aaaa"
+                                                                   type="text"><br>
+        <input id="btcadastrar" type="button" value="Cadastrar">
+    </fieldset>
+</form>
+<table id="funcionarios">
+    <thead>
+    <tr>
+        <th>Nome</th>
+        <th>Data de Nascimento</th>
+        <th>Data de Admissão</th>
+        <th>Excluir</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+<script>
+    class Pessoas {
+        #nome = "";
+        #dataNascimento = "";
+
+        constructor(nome, dataNascimento) {
+            this.#nome = nome;
+            this.#dataNascimento = dataNascimento;
+            this._nome = nome;
+            this._dataNascimento = dataNascimento;
+        }
+
+        get nome() {
+            return this._nome;
+        }
+
+        set nome(value) {
+            this._nome = value;
+        }
+
+        get dataNascimento() {
+            return this._dataNascimento;
+        }
+
+        set dataNascimento(value) {
+            this._dataNascimento = value;
+        }
+
+        #_idade = function () {
+            let dataNasc = new Date(this._dataNascimento);
+            let dataAtual = new Date();
+            return dataAtual.getFullYear() - dataNasc.getFullYear();
+        };
+
+
+        get idade() {
+            return this.#_idade;
+        }
+
+        set idade(value) {
+            this.#_idade = value;
+        }
+    }
+
+    class Funcionario extends Pessoas {
+        #dataAdminissao = "";
+
+        constructor(nome, dataNascimento, dataAdminissao) {
+            super(nome, dataNascimento);
+            this.#dataAdminissao = dataAdminissao;
+            this._dataAdminissao = dataAdminissao;
+        }
+
+        get dataAdminissao() {
+            return this._dataAdminissao;
+        }
+
+        set dataAdminissao(value) {
+            this._dataAdminissao = value;
+        }
+
+        #_tempoServico = function () {
+            let dataAdm = new Date(this._dataAdminissao);
+            let dataAtual = new Date();
+            return dataAtual.getFullYear() - dataAdm.getFullYear();
+        };
+
+        get tempoServico() {
+            return this.#_tempoServico;
+        }
+
+        set tempoServico(value) {
+            this.#_tempoServico = value;
+        }
+    }
+
+    $("#btcadastrar").on('click', () => {
+        let funcionario = new Funcionario($('#nome').val(),
+            $('#datanasc').val(),
+            $('#dataadmissao').val());
+
+        console.log(funcionario);
+
+        let erro = "";
+        if (!funcionario.dataNascimento.match("(\\d{2})+/(\\d{2})+/(\\d{4})")) {
+            erro += "A data de nascimento não está no formato dd/mm/yyyy! \n";
+        }
+
+        if (!funcionario.dataAdminissao.match("(\\d{2})+/(\\d{2})+/(\\d{4})")) {
+            erro += "A data de admissão não está no formato dd/mm/yyyy! \n";
+        }
+
+
+        if (erro !== "") {
+            alert(erro);
+        } else {
+            $("#funcionarios tbody").append('<tr>' +
+                '<td>' + funcionario.nome + '</td>' +
+                '<td>' + funcionario.dataNascimento + '(' + funcionario.idade() + ' anos)</td>' +
+                '<td>' + funcionario.dataAdminissao + '(' + funcionario.tempoServico() + ' anos)</td>' +
+                '<td style="color: #f00" onclick="deletar(this)">X</td>' +
+                '</tr>');
+
+            $('#nome').val('');
+            $('#datanasc').val('');
+            $('#dataadmissao').val('');
+        }
+    });
+
+    function deletar(e) {
+        $(e).closest("tr").remove();
+    }
+</script>
+</body>
+</html>

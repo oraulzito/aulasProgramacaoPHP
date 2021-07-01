@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Ajax </title>
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <!-- CSS only -->
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" rel="stylesheet">
+</head>
+<body class=" w-75 m-auto">
+<label for="login">Login</label>
+<input class="form-control" id="login" onchange="checkUser(this)" type="text">
+<p class="alert alert-danger" id="aviso">Este login já existe</p>
+<img alt="imguser" id="imgUser" src="">
+<br>
+<hr>
+<label for="estado">Estado</label>
+<select class="form-control" id="estado" onchange="getCidades(this)">
+</select>
+<br>
+
+<label for="cidade">Cidade</label>
+<select class="form-control" id="cidade">
+</select>
+<br>
+<script>
+    $('body').ready(function () {
+        $("#aviso").hide();
+        $("#imgUser").hide();
+        getEstados(true);
+    });
+
+    function checkUser(e) {
+        $.get('ajax.php', {nome: $(e).val()}, function (data) {
+            data = JSON.parse(data);
+            console.log(data);
+            if (data.length > 0) {
+                $("#imgUser").attr("src", data[0].foto);
+                $("#imgUser").attr("height", '100px');
+                $("#imgUser").attr("width", '100px');
+                $("#imgUser").show();
+                $("#aviso").show();
+            } else {
+                $("#imgUser").hide();
+                $("#aviso").hide();
+            }
+        });
+    }
+
+    function getEstados(firstLoad) {
+        $.get('ajax.php', {estados: true}, function (data) {
+            data = JSON.parse(data);
+            if (data.length > 0) {
+                for (let i = 0; i < data.length; i++) {
+                    $("#estado").append('<option value=' + data[i].id + '>' + data[i].nome + '</option>');
+                }
+
+                if (firstLoad) {
+                    getCidades(parseInt(data[0].id));
+                }
+            }
+        });
+    }
+
+    function getCidades(e) {
+        let estado;
+
+        if (Number.isInteger(e)) {
+            estado = e;
+        } else {
+            estado = $(e).val();
+        }
+        console.log(estado);
+
+        $("#cidade").html('');
+
+        $.get('ajax.php', {estado: estado}, function (data) {
+            data = JSON.parse(data);
+            if (data.length > 0) {
+                for (let i = 0; i < data.length; i++) {
+                    $("#cidade").append('<option value=' + data[i].id + '>' + data[i].nome + '</option>');
+                }
+            }
+        });
+    }
+
+
+</script>
+</body>

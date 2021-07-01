@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manipulação de DOM</title>
+    <style>
+        div div, .div {
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 4px;
+            background-color: white;
+        }
+
+        #imagem {
+            /*background-image: url('http://canoas.ifrs.edu.br/site/img/logo_novo.png');*/
+            background-image: url('http://3.bp.blogspot.com/-eRzpI1vNOVE/UnBYUPzrh-I/AAAAAAAAALU/ksaHNBANnbI/s320/%C3%8Dndice.jpeg');
+            background-position: -20px -40px;
+        }
+    </style>
+</head>
+<body>
+<div id="caixas">
+    <div id="some" onclick="this.remove();">Clique para eu sumir</div>
+    <div id="cor" onclick="this.style.backgroundColor = '#f00';">Clique para eu mudar de cor</div>
+    <div id="luz" onclick="body.style.backgroundColor = '#000';">Clique para apagar a luz</div>
+    <div id="imagem" onclick="this.style.backgroundPosition = '-140px -40px';">Clique
+        para mudar a imagem
+    </div>
+    <div id="fabrica" onclick="let div = document.createElement('DIV');document.getElementById('caixas').appendChild(div);">Clique para fabricar caixas</div>
+    <div id="destroi" onclick="let caixas = document.getElementById('caixas'); caixas.lastElementChild.remove();">Clique para destruir caixas</div>
+</div>
+</body>
+</html>
