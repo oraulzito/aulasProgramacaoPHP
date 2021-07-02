@@ -1,7 +1,7 @@
 <?php
 
 
-class MySQL
+class DB
 {
     private string $endereco;
     private string $login;
@@ -52,8 +52,29 @@ class MySQL
             }
 
             if ($insert->execute() == 1) {
-                $this->data = $insert->fetch();
-                return 1;
+                return $insert;
+            } else {
+                throw new PDOException("Erro ao procurar");
+            }
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    public function find(string $table, string $where)
+    {
+        $this->table = $table;
+        $this->where = $where;
+
+        try {
+            if ($where != '') {
+                $insert = $this->con->prepare('SELECT * FROM ' . $table . ' WHERE ' . $where);
+            } else {
+                $insert = $this->con->prepare('SELECT * FROM ' . $table);
+            }
+
+            if ($insert->execute() == 1) {
+                return $insert;
             } else {
                 throw new PDOException("Erro ao procurar");
             }
