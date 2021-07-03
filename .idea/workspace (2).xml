@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ee265a71-ddb2-4908-b7d3-74dd43153c81" name="Default Changelist" comment="Inicio projeto final&#10;- Categorias&#10;- Melhorias no detalhamento de produto&#10;- Carrinho feito&#10;- ajustes">
+      <change afterPath="$PROJECT_DIR$/agradecemosContato.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/carrinho.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/finalizacaoCarrinho.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prog2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/lojaVacina.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/ajax/ajax.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/ajax/ajax.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/arquivos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/canvas.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/domdomdom.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/eventos.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/intro.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jkeri.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/oopt1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/oopt2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/regex.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/BD/mysqli/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/BD/mysqli/mysqli.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/BD/pdo/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/BD/pdo/pdo.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/OO - parte 1/Funcionario.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/OO - parte 1/Pessoa.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/OO - parte 1/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/OO - parte 2/MySQL.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/OO - parte 2/autoload.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/OO - parte 2/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/arquivos/arquivoEntradas.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/arquivos/contador.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/cookiesAndSession/cookies.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/cookiesAndSession/session.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/formulario/form.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/formulario/formRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/funcoes.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/upload/upload.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/upload/uploadRequest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trabalho/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trabalho/cadastro.php" beforeDir="false" afterPath="$PROJECT_DIR$/cadastro.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trabalho/carrinho.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trabalho/classes/Categoria.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Categoria.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trabalho/classes/Endereco.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Endereco.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trabalho/classes/Produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Produto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trabalho/classes/Usuario.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Usuario.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trabalho/contato.php" beforeDir="false" afterPath="$PROJECT_DIR$/contato.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trabalho/controllers/endereco.controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/endereco.controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trabalho/controllers/produto.controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/produto.controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trabalho/controllers/usuario.controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/usuario.controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trabalho/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trabalho/js/carrinho.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/carrinho.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trabalho/js/endereco.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/endereco.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trabalho/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trabalho/js/produto.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/produto.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trabalho/js/usuario.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/usuario.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trabalho/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trabalho/logout.php" beforeDir="false" afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trabalho/notfound.php" beforeDir="false" afterPath="$PROJECT_DIR$/notfound.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trabalho/pesquisa.php" beforeDir="false" afterPath="$PROJECT_DIR$/pesquisa.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trabalho/produto.php" beforeDir="false" afterPath="$PROJECT_DIR$/produto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trabalho/utils/DB.php" beforeDir="false" afterPath="$PROJECT_DIR$/utils/DB.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trabalho/utils/Email.php" beforeDir="false" afterPath="$PROJECT_DIR$/utils/Email.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trabalho/utils/layout.php" beforeDir="false" afterPath="$PROJECT_DIR$/utils/Layout.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectId" id="1tut5BEqAWi9hpSZbWonBQOUwfe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/sputnik-brasil.jpg" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\raul_\PhpstormProjects\prog2" />
+      <recent name="C:\Users\raul_\PhpstormProjects\prog2\trabalho\controllers" />
+      <recent name="C:\Users\raul_\PhpstormProjects\prog2\trabalho" />
+      <recent name="C:\Users\raul_\PhpstormProjects\prog2\trabalho\utils" />
+      <recent name="C:\Users\raul_\PhpstormProjects\prog2\js\ajax" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\raul_\PhpstormProjects\prog2" />
+      <recent name="C:\Users\raul_\PhpstormProjects\prog2\trabalho" />
+      <recent name="C:\Users\raul_\PhpstormProjects\prog2\aulas" />
+      <recent name="C:\Users\raul_\PhpstormProjects\prog2\trabalho\utils" />
+      <recent name="C:\Users\raul_\PhpstormProjects\prog2\js\ajax" />
+    </key>
+  </component>
+  <component name="RunManager" selected="PHP Script.index.php">
+    <configuration name="Unnamed" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" nameIsGenerated="true" document_root="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/../aulasProgramacaoPHP/php/OO - parte 1/index.php">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="PHP Script.index.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ee265a71-ddb2-4908-b7d3-74dd43153c81" name="Default Changelist" comment="" />
+      <created>1623630619588</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1623630619588</updated>
+      <workItem from="1623630622169" duration="756000" />
+      <workItem from="1623712303916" duration="2401000" />
+      <workItem from="1624398312030" duration="9908000" />
+      <workItem from="1624825334779" duration="11165000" />
+      <workItem from="1624985996684" duration="29085000" />
+      <workItem from="1625079013516" duration="47113000" />
+      <workItem from="1625230567851" duration="49853000" />
+    </task>
+    <task id="LOCAL-00001" summary="Atividade de formulários">
+      <created>1624480497560</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1624480497560</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Atividade de formulários com upload">
+      <created>1624481751644</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1624481751644</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Atividade de formulários com upload">
+      <created>1624482002130</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1624482002130</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Cookies and Session activity">
+      <created>1624828749869</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1624828749869</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Cookies and Session activity">
+      <created>1624829843515</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1624829843515</updated>
+    </task>
+    <task id="LOCAL-00006" summary="DB tasks">
+      <created>1624837362982</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1624837362982</updated>
+    </task>
+    <task id="LOCAL-00007" summary="OO Tasks">
+      <created>1625010089774</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1625010089774</updated>
+    </task>
+    <task id="LOCAL-00008" summary="JS/jQuery/ajax tasks">
+      <created>1625164157716</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1625164157716</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Inicio projeto final&#10;- Categorias&#10;- Melhorias no detalhamento de produto&#10;- Carrinho feito&#10;- ajustes">
+      <created>1625286536345</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1625286536345</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Atividade de formulários" />
+    <MESSAGE value="Atividade de formulários com upload" />
+    <MESSAGE value="Cookies and Session activity" />
+    <MESSAGE value="DB tasks" />
+    <MESSAGE value="OO Tasks" />
+    <MESSAGE value="JS/jQuery/ajax tasks" />
+    <MESSAGE value="Inicio projeto final&#10;- Tela inicial&#10;- Tela de detalhes de produtos&#10;- Classes&#10;- Banco de dados&#10;- Inicio do carrinho" />
+    <MESSAGE value="Inicio projeto final&#10;- Categorias&#10;- Melhorias no detalhamento de produto&#10;- Carrinho feito&#10;- ajustes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Inicio projeto final&#10;- Categorias&#10;- Melhorias no detalhamento de produto&#10;- Carrinho feito&#10;- ajustes" />
+  </component>
+</project>

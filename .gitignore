@@ -1,5 +1,5 @@
 ./idea/*
-js/bootstrap.js
+../js/bootstrap.js
 js/bootstrap.esm.js
 js/bootstrap.bundle.js
 css/bootstrap.css
