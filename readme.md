@@ -23,4 +23,3 @@
 - [X] OO in JS (classes)
 - [X] Canvas
 - [X] Ajax
-- [ ] Final Work
