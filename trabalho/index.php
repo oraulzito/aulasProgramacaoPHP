@@ -9,6 +9,9 @@ $prods = $prodClass->lista();
 
 echo $layout->header();
 if (!is_bool($prods)) {
+    ?>
+    <h2>Produtos em destaque</h2>
+    <?php
     foreach ($prods as $p) {
         ?>
         <div class="card mx-auto my-4" style="width: 18rem;">

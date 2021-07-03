@@ -1,7 +1,8 @@
 <?php
+require_once($_SERVER['DOCUMENT_ROOT'] . '\trabalho\utils\DB.php');
 
-
-class Endereco{
+class Endereco
+{
     private string $cep;
     private string $rua;
     private int $numero;
@@ -27,5 +28,17 @@ class Endereco{
     public function __set(string $name, $value): void
     {
         $this->$name = $value;
+    }
+
+    public function getEstados(int $idPais = 1)
+    {
+        $db = new DB();
+        return $db->find('estado', 'pais = ' . $idPais)->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getCidades(int $idEstado)
+    {
+        $db = new DB();
+        return $db->find('cidade', 'estado = ' . $idEstado)->fetchAll(PDO::FETCH_ASSOC);
     }
 }

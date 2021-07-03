@@ -7,19 +7,19 @@ $prodClass = new Produto();
 
 if (isset($_REQUEST['idProd']) and $_REQUEST['idProd'] >= 0) {
     $prod = $prodClass->buscaProduto($_REQUEST['idProd']);
-    echo $layout->header([], ['js/produto.js']);
+    echo $layout->header([]);
     if (!is_bool($prod)) {
         ?>
         <div class="d-flex m-auto h-100">
             <div class="col-md-6 col-sm-12 text-center">
-                <img src="<?php echo $prod->imagem; ?>" alt="imagem de vacina">
+                <img src="<?php echo $prod->imagem; ?>" alt="imagem de vacina" width="250px">
             </div>
             <div class="col-md-6 col-sm-12">
                 <h2>R$<?php echo $prod->valor; ?></h2>
                 <h4><?php echo $prod->descricao; ?></h4>
 
                 <label> Quantidade:
-                    <input type="number" min="0" class="form-control form-control-sm" id="qtdProd">
+                    <input type="number" min="1" class="form-control form-control-sm" id="qtdProd" value="1">
                 </label>
                 <br>
                 <br>
@@ -34,7 +34,7 @@ if (isset($_REQUEST['idProd']) and $_REQUEST['idProd'] >= 0) {
         <small>Pois, possivelmente, alguém não respondeu algum email.</small>
         <?php
     }
-    echo $layout->footer();
+    echo $layout->footer(['js/produto.js']);
 } else {
     header('Location: notfound.php');
 }

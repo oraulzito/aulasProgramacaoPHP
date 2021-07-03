@@ -21,4 +21,6 @@ function addCarrinho(e) {
     }
 
     localStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+    window.location.replace('carrinho.php');
 }

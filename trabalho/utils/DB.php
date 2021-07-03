@@ -39,6 +39,32 @@ class DB
         return new PDO('mysql:host=' . $this->endereco . ';dbname=' . $this->database, $this->login, $this->senha);
     }
 
+    public function insert(string $table, string $into, array $values)
+    {
+        $insertValues = "";
+        $i = 0;
+
+        // FIXME this will only works with varchar
+        foreach ($values as $v) {
+            if ($i == count($values) - 1)
+                $insertValues .= '\'' . $v . '\'';
+            else
+                $insertValues .= '\'' . $v . '\', ';
+            $i++;
+        }
+
+        try {
+            $insert = $this->con->prepare("INSERT INTO " . $table . " (" . $into . ") VALUES (" . $insertValues . ")");
+            if ($insert->execute() == 1) {
+                return $insert;
+            } else {
+                throw new PDOException("Erro ao procurar");
+            }
+        } catch (PDOException $e) {
+            echo $e->getMessage();
+        }
+    }
+
     public function findFirst(string $table, string $where)
     {
         $this->table = $table;

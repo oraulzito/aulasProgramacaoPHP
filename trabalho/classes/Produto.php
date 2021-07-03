@@ -11,20 +11,6 @@ class Produto
     private string $valor;
     private Categoria $categoria;
 
-//    public function __construct(string $id,
-//                                string $nome,
-//                                string $descricao,
-//                                string $imagem,
-//                                string $valor, Categoria $categoria)
-//    {
-//        $this->id = $id;
-//        $this->nome = $nome;
-//        $this->descricao = $descricao;
-//        $this->imagem = $imagem;
-//        $this->valor = $valor;
-//        $this->categoria = $categoria;
-//    }
-
     public function __construct()
     {
     }
@@ -48,9 +34,48 @@ class Produto
 
     }
 
-    public function pesquisa()
+    public function pesquisa(string $termo)
     {
+        $termo = '\'%' . $termo . '%\'';
 
+        $db = new DB();
+        return $db->find('Produto', 'nome LIKE ' . $termo . ' OR descricao LIKE ' . $termo . '')->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    public function finalizarPedido(array $itens, string $nome, string $email)
+    {
+        $mensagem = '<h1>Resumo do seu pedido</h1>';
+        $mensagem .= '<table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Produto</th>
+                <th>Quantidade</th>
+                <th>Valor</th>                
+            </tr>
+        </thead>
+        <tbody>';
+
+        foreach ($itens as $i) {
+            $result = $this->buscaProduto($i['id']);
+
+            $mensagem .= '<tr>';
+            $mensagem .= '<td><img src="' . $result->imagem . '" width="50px"></td>';
+            $mensagem .= '<td>' . $result->nome . '</td>';
+            $mensagem .= '<td>' . $i['qtd'] . '</td>';
+            if ($result->nome === 'Covaxxin') {
+                $mensagem .= '<td>' . $i['qtd'] * ($result->valor + 1) . '</td>';
+            } else {
+                $mensagem .= '<td>' . $i['qtd'] * $result->valor . '</td>';
+            }
+            $mensagem .= '</tr>';
+        }
+
+        $mensagem .= '</tbody>
+                    </table>';
+
+        $email = new Email();
+        return $email->enviaEmail('Recibo', $mensagem, $nome, $email);
     }
 
     public function buscaProduto(int $id = -1)
@@ -78,6 +103,6 @@ class Produto
     public function lista()
     {
         $db = new DB();
-        return $db->find('Produto', '')->fetchAll(PDO::FETCH_OBJ);
+        return $db->find('Produto', 'destaque = 1')->fetchAll(PDO::FETCH_OBJ);
     }
 }

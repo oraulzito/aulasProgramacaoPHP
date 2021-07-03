@@ -1,8 +1,11 @@
 <?php
-require_once ('../classes/Produto.php');
-
+require_once('../classes/Produto.php');
+require_once('../utils/Email.php');
+session_start();
 $prodClass = new Produto();
 
-if (isset($_REQUEST['carrinho']) and isset($_REQUEST['carrinhoIds'])) {
+if (isset($_REQUEST['finalizar']) and isset($_REQUEST['carrinhoItens'])) {
+    echo json_encode($prodClass->finalizarPedido($_REQUEST['carrinhoItens'], $_SESSION['user']['nome'], $_SESSION['user']['email']));
+} elseif (isset($_REQUEST['carrinho']) and isset($_REQUEST['carrinhoIds'])) {
     echo json_encode($prodClass->carrinhoProdutos($_REQUEST['carrinhoIds']));
 }
